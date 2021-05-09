@@ -5,7 +5,7 @@
       "args": [
         "build",
         "-t",
-        "gcr.io/pytest-313001/juviwhale",
+        "gcr.io/pytest-313001/eric-juviwhale",
         "."
        ]
    }

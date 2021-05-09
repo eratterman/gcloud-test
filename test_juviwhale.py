@@ -3,7 +3,7 @@ from tools import DbConnect
 from pydantic import ValidationError
 
 
-URL = 'http://localhost:8000'
+URL = 'https://eric-juviwhale-pnbrqu3f5a-wl.a.run.app'
 DB = DbConnect()
 
 

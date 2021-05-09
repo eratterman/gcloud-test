@@ -49,7 +49,7 @@ class DbConnect(object):
             # if doc already exists, increment value
             doc_ref.set({'value': doc_val + value})
 
-        return self.get_documents()
+        return "Success"
 
     def __repr__(self):
         return f'<Firestore DB Connection: {self.collection}>'

@@ -5,10 +5,23 @@ BASE_URL = 'https://eric-juviwhale-pnbrqu3f5a-wl.a.run.app'
 
 
 def get_documents():
-    pass
+    url = fr'{BASE_URL}/get_tag_stats/'
+    result = requests.get(url)
+    print(result.status_code)
+    return result.json()
+
+
+def save_doc(name, value):
+    args = dict()
+    args['name'] = name
+    args['value'] = value
+    url = f'{BASE_URL}/increment_tag/'
+    result = requests.post(url, json=url)
+    print(result.status_code)
+    return result.json()
 
 
 if __name__ == '__main__':
-    result = requests.get(BASE_URL)
-    print(result.status_code)
-    print(result.text)
+    test = get_documents()
+    test = save_doc('foo_bar', 8)
+    print(test, type(test))

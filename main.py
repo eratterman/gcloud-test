@@ -9,7 +9,7 @@ DB = DbConnect()
 
 
 # set up names model
-class Names(BaseModel):
+class Tags(BaseModel):
     name: str
     value: int
 
@@ -46,8 +46,8 @@ async def get_tag_stats():
 
 
 @app.post('/increment_tag')
-async def increment_tag(new_name: Names):
-    json_dict = new_name.dict()
+async def increment_tag(new_tag: Tags):
+    json_dict = new_tag.dict()
     return DB.add_document(
         json_dict.get('name', ''), json_dict.get('value', 0)
     )

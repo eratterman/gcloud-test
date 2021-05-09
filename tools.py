@@ -33,7 +33,7 @@ class DbConnect(object):
 
     def add_document(self, name, value):
         # pull current docs and check for name and value
-        # self.get_documents()
+        self.get_documents()
         doc_val = self.docs.get(name, None)
 
         try:

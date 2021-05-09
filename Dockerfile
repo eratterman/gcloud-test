@@ -1,5 +1,5 @@
 # Step 1: Use official lightweight Python image as base OS.
-FROM python:3.7-slim
+FROM python:3.8-slim
 
 # Step 2. Copy local code to the container image.
 ENV APP_HOME /app

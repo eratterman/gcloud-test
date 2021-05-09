@@ -1,7 +1,7 @@
 import requests
 
 
-BASE_URL = ''
+BASE_URL = 'https://eric-juviwhale-pnbrqu3f5a-wl.a.run.app'
 
 
 def get_documents():
@@ -9,4 +9,6 @@ def get_documents():
 
 
 if __name__ == '__main__':
-    pass
+    result = requests.get(BASE_URL)
+    print(result.status_code)
+    print(result.text)

@@ -1,0 +1,10 @@
+# ignore files
+Dockerfile
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache
+venv
+test_juviwhale.py
+juvi_whale.py
